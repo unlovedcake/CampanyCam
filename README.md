@@ -4,6 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
+##LinkToAddLocalProject to GitHub 
+##https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:

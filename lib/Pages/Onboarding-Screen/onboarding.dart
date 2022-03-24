@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 //import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../sign-in.dart';
+
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
 
@@ -44,20 +46,20 @@ class _OnboardingState extends State<Onboarding> {
                   children: [
                     pageViewContent(
                         "images/image1.png",
-                        "Company Cam",
+                        "Customer App",
                         "All your job photos in one place",
                         "Your crew has access to every photo and video taken \nplus you get unlimited storage, so fire away.",
                         Colors.white),
                     pageViewContent(
                         "images/image2.png",
-                        "Company Cam",
+                        "Customer App",
                         "Stupid simple organization.",
                         "Photos are organized by date and job site, so you"
                             "\n always know when and where they were taken.",
                         Colors.white),
                     pageViewContent(
                         "images/image3.png",
-                        "Company Cam",
+                        "Customer App",
                         "Keep everyone on the same page.",
                         "No more driving around. Communicate with your \n crew and share job progress directly from the app.",
                         Colors.white),
@@ -79,14 +81,15 @@ class _OnboardingState extends State<Onboarding> {
                         controller: _controller,
                         count: 3,
                         effect: const SlideEffect(
-                            spacing: 12.0,
-                            // radius: 4.0,
-                            dotWidth: 10.0,
-                            dotHeight: 10.0,
-                            paintStyle: PaintingStyle.stroke,
-                            strokeWidth: 1,
-                            dotColor: Colors.grey,
-                            activeDotColor: Colors.orange),
+                          spacing: 12.0,
+                          // radius: 4.0,
+                          dotWidth: 10.0,
+                          dotHeight: 10.0,
+                          paintStyle: PaintingStyle.stroke,
+                          strokeWidth: 1,
+                          dotColor: Colors.grey,
+                          activeDotColor: Color(0xff00ABC9),
+                        ),
                         onDotClicked: (index) => _controller.animateToPage(
                           index,
                           duration: const Duration(
@@ -105,8 +108,8 @@ class _OnboardingState extends State<Onboarding> {
                 style: ElevatedButton.styleFrom(
                     minimumSize: Size(370, 40),
                     textStyle: TextStyle(fontSize: 14),
-                    primary: Colors.blue,
-                    onPrimary: Colors.black),
+                    primary: Color(0xff00ABC9),
+                    onPrimary: Colors.white),
                 onPressed: () {
                   Get.to(() => const CreateNewCompany(),
                       transition: Transition.circularReveal,
@@ -126,7 +129,11 @@ class _OnboardingState extends State<Onboarding> {
                   side: BorderSide(width: 1, color: Colors.black),
                   //onPrimary: Colors.blue
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const SignIn(),
+                      transition: Transition.circularReveal,
+                      duration: const Duration(seconds: 2));
+                },
                 child: const Text(
                   "Sign in to an Existing Account",
                   style: TextStyle(fontWeight: FontWeight.bold),

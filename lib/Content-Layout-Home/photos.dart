@@ -11,48 +11,31 @@ class Photos extends StatefulWidget {
 class _PhotosState extends State<Photos> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-      child: Card(
-        elevation: 4,
-        shadowColor: Colors.blueGrey,
-        shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.grey, width: 0.5),
-            borderRadius: BorderRadius.circular(10)),
-        child: Row(
-          children: [
-            Container(
-              width: 100,
-              child: Image.asset(
-                "images/camera.png",
-                fit: BoxFit.cover,
-                color: Colors.grey[300],
+    return Card(
+      elevation: 4,
+      shadowColor: Colors.blueGrey,
+      shape: RoundedRectangleBorder(
+          side: BorderSide(color: Colors.grey, width: 0.5),
+          borderRadius: BorderRadius.circular(10)),
+      child: Container(
+        alignment: Alignment.topLeft,
+        width: 200,
+        height: 200,
+        margin: const EdgeInsets.all(8),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Image(
+                image: NetworkImage('https://www.tutorialkart.com/img/hummingbird.png'),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "165 V.H Garces Street",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Text("Talisay Central Visayas"),
-                ],
+              Text(
+                "165 V.H Garces",
+                style: TextStyle(color: Colors.grey, fontSize: 12),
               ),
-            ),
-            Expanded(child: Container()),
-            Padding(
-              padding: const EdgeInsets.only(right: 18.0),
-              child: Image.asset(
-                "images/camera.png",
-                fit: BoxFit.fill,
-                height: 20,
-                width: 20,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

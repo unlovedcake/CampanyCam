@@ -2,27 +2,28 @@ import 'package:companycam/Widgets/sizebox.dart';
 import 'package:flutter/material.dart';
 
 class TextFormFields {
-  static Widget textFormFields(
-      String label, String hint, TextEditingController? controller,
+  static Widget textFormFields(String hint, TextEditingController? controller,
       {required Widget? widget,
       required Widget? sufixIcon,
       required bool obscureText,
       required TextInputType keyboardType,
       required TextInputAction textInputAction,
-      required FormFieldValidator validator}) {
+      required FormFieldValidator validator,
+      required Function(String)? onChanged}) {
     return Padding(
-      padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+      padding: const EdgeInsets.only(right: 12.0),
       child: Column(
         children: [
           Row(
             children: [
               Expanded(
                 child: TextFormField(
+                  onChanged: onChanged,
                   obscureText: obscureText,
                   keyboardType: keyboardType,
                   textInputAction: textInputAction,
                   autofocus: false,
-                  cursorColor: Colors.orange,
+                  cursorColor: Colors.black,
                   controller: controller,
                   validator: validator,
                   style: const TextStyle(
@@ -31,7 +32,7 @@ class TextFormFields {
                     color: Colors.black,
                   ),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    contentPadding: EdgeInsets.fromLTRB(15, 15, 20, 15),
                     hintText: hint,
                     labelText: hint,
                     border: OutlineInputBorder(

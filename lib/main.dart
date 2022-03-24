@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         duration: 3000,
         imageSize: 100,
         imageSrc: "images/camera.png",
-        text: "Company Cam",
+        text: "Customer App",
         textType: TextType.ColorizeAnimationText,
         textStyle: const TextStyle(
           fontSize: 20.0,

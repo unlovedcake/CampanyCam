@@ -34,7 +34,7 @@ class TextFormFields {
                   // readOnly: widget == null ? false : true,
                   textInputAction: textInputAction,
                   autofocus: false,
-                  cursorColor: Colors.orange,
+                  cursorColor: Colors.black,
                   controller: controller,
                   validator: validator,
                   style: TextStyle(
@@ -43,7 +43,7 @@ class TextFormFields {
                     color: Colors.black,
                   ),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+                    contentPadding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                     hintText: hint,
                     labelText: hint,
                     border: OutlineInputBorder(
@@ -51,7 +51,7 @@ class TextFormFields {
                     ),
                     suffixIcon: sufixIcon,
                     focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.orangeAccent, width: 2.0),
+                      borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
                   ),
                 ),

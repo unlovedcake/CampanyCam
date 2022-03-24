@@ -38,6 +38,28 @@ dependencies:
   get: ^4.6.1
   splash_screen_view: ^3.0.0
 
+  geoflutterfire2: ^2.3.10
+  geoflutterfire: ^3.0.1
+  flutter_google_places_hoc081098: ^1.0.1
+  google_api_headers: ^1.1.1
+  google_maps_webservice: ^0.0.19
+  flutter_polyline_points: ^1.0.0
+  geolocator: ^7.4.0
+  google_maps_flutter: ^2.0.6
+  geocoding: ^2.0.0
+  intl: ^0.17.0
+
+
+
+
+dependency_overrides:
+  firebase_messaging_platform_interface: 3.1.6
+  firebase_storage_platform_interface: 4.0.14
+  cloud_functions_platform_interface: 5.0.21
+  cloud_firestore_platform_interface: 5.4.13
+  firebase_auth_platform_interface: 6.1.11
+  firebase_database_platform_interface: 0.2.0+5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
